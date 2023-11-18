@@ -50,6 +50,9 @@ Este projeto consiste em um sistema para gerenciar as operações de um mercado,
 ## Execute o servidor PHP embutido:
 ``php -S localhost:8000``
 
+## Execute o servidor PHP embutido:
+``rodar docker``
+
 ## Acesse o sistema no navegador:
 ``http://localhost:8000``
 
