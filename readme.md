@@ -61,7 +61,7 @@ Este projeto consiste em um sistema para gerenciar as operações de um mercado,
 ``php -S localhost:8000``
 
 ## Execute a imagem docker:
-``rodar docker``
+``docker-compose up -d --build``
 
 ## Acesse o sistema no navegador:
 ``http://localhost:8000``
