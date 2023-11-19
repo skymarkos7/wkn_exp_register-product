@@ -2,10 +2,14 @@
 
 // Include necessary files
 require_once 'controllers/UserController.php';
+require_once 'controllers/ProductController.php';
+require_once 'controllers/ProductTypeController.php';
 require_once 'models/UserModel.php';
 
 // Instantiate controllers and models
 $userController = new UserController();
+$productController = new ProductController();
+$typeController = new ProductTypeController();
 $userModel = new UserModel();
 
 // Define routes
@@ -16,6 +20,10 @@ $routes = [
 ];
 
 $routes['GET /greeting'] = [$userController, 'getGreeting'];
+
+$routes['GET /product'] = [$productController, 'getAllProducts'];
+
+$routes['GET /type'] = [$typeController, 'getAllTypes'];
 
 // Route manager function
 function handleRequest($method, $uri)
