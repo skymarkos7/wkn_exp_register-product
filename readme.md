@@ -20,6 +20,16 @@ Este projeto consiste em um sistema para gerenciar as operações de um mercado,
         - api.php
     - index.php
 
+## Seguindo padrões recomendados
+   - PSR`s do PHP: 
+      - funções e classes tem a chave aberta na próxima linha
+      - variáveis são escrita em snakeCase
+      - Classes são escritas com suas inicias em maiusculo
+   - Git
+      - Para cada nova funcionalidade é desenvolvida em sua propria branch. no padrão feature/nome-Da-Branch
+      - Não se desenvolve código na main/master. Todo código é mergiado posteriormente na developer que por sua vez vai para a main/master
+      - Novas branchs se derivam da develop.
+
 
 
 ## Funcionalidades
@@ -50,7 +60,7 @@ Este projeto consiste em um sistema para gerenciar as operações de um mercado,
 ## Execute o servidor PHP embutido:
 ``php -S localhost:8000``
 
-## Execute o servidor PHP embutido:
+## Execute a imagem docker:
 ``rodar docker``
 
 ## Acesse o sistema no navegador:
