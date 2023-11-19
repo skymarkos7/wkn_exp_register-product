@@ -10,7 +10,17 @@ class ProductController
         $productModel = new ProductModel();
         $products = $productModel->getAllProducts();
 
-        var_dump($products);
+        print_r($products);
+    }
+
+    public function getProduct()
+    {
+        print_r("sss");
+    }
+
+    public function registerProduct()
+    {
+        print_r("registrado");
     }
     
 }

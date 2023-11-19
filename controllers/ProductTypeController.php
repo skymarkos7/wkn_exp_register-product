@@ -9,7 +9,9 @@ class ProductTypeController
         $typeModel = new ProductTypeModel();
         $productsType = $typeModel->getAllTypes();
 
-        var_dump($productsType);
+        print_r($productsType);
     }
+
+    
     
 }
