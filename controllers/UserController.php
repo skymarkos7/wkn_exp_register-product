@@ -1,15 +1,16 @@
 <?php
 
+
 class UserController
 {
     public function getAllUsers()
     {
-        echo"todos usuario";
+        echo "Todos usuários";
     }
 
     public function getUserById($userId)
     {
-        echo"usuario pelo id";
+        echo "usuario pelo id";
     }
 
     public function getGreeting()
