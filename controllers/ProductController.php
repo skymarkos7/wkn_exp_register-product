@@ -20,7 +20,9 @@ class ProductController
 
     public function registerProduct()
     {
-        print_r("registrado");
+        $productModel = new ProductModel();
+        $products = $productModel->registerProduct();
+        print_r($products);
     }
     
 }

@@ -6,7 +6,7 @@ class ProductModel
 {
     public function getAllProducts()
     {
-        // Crie uma instância da classe Database
+        // Start a instance for the class DB
         $db = new Database();
         $conn = $db->getConnection();
         // Agora você pode realizar operações no banco de dados usando $conn
@@ -30,6 +30,33 @@ class ProductModel
     public function getProductById($userId)
     {
         // Your code to retrieve a user by ID from the database
+    }
+
+    public function registerProduct()
+    {
+        // Start a instance for the class DB
+        $db = new Database();
+        $conn = $db->getConnection();
+        
+        try {
+            $name = $_POST['name'];
+            $price = $_POST['price'];
+            $typeId = $_POST['typeId'];
+        
+            $stmt = $conn->prepare('INSERT INTO products (name, price, type_id) VALUES (:name, :price, :typeId)');
+            
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':price', $price);
+            $stmt->bindParam(':typeId', $typeId);
+        
+            $stmt->execute();
+        
+            return "Novo produto inserido com sucesso!";
+        
+        } catch (PDOException $e) {
+            return "Erro ao inserir na tabela products: " . $e->getMessage();
+        }
+        
     }
 
     // Add other model methods as needed
