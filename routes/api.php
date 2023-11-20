@@ -27,7 +27,10 @@ $routes = [
     'POST /product' => [$productController, 'registerProduct'],
 ];
 
-$routes['GET /type'] = [$typeController, 'getAllTypes'];
+$routes = [
+    'GET /type' => [$typeController, 'getAllTypes'],
+    'POST /type' => [$typeController, 'registerType'],
+];
 
 // Route manager function
 function handleRequest($method, $uri)

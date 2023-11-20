@@ -31,5 +31,28 @@ class ProductTypeModel
         // Your code to retrieve a user by ID from the database
     }
 
+    public function registerType()
+    {
+        // Start a instance for the class DB
+        $db = new Database();
+        $conn = $db->getConnection();
+        
+        try {
+        
+            $stmt = $conn->prepare('INSERT INTO products_type (name, percent) VALUES (:name, :percent)');
+            
+            $stmt->bindParam(':name', $_POST['name']);
+            $stmt->bindParam(':percent', $_POST['percent']);
+        
+            $stmt->execute();
+        
+            return "Novo product Type inserido com sucesso!";
+        
+        } catch (PDOException $e) {
+            return "Erro ao inserir na tabela products_type: " . $e->getMessage();
+        }
+        
+    }
+
     // Add other model methods as needed
 }

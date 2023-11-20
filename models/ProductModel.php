@@ -39,15 +39,12 @@ class ProductModel
         $conn = $db->getConnection();
         
         try {
-            $name = $_POST['name'];
-            $price = $_POST['price'];
-            $typeId = $_POST['typeId'];
         
             $stmt = $conn->prepare('INSERT INTO products (name, price, type_id) VALUES (:name, :price, :typeId)');
             
-            $stmt->bindParam(':name', $name);
-            $stmt->bindParam(':price', $price);
-            $stmt->bindParam(':typeId', $typeId);
+            $stmt->bindParam(':name', $_POST['name']);
+            $stmt->bindParam(':price', $_POST['price']);
+            $stmt->bindParam(':typeId', $_POST['typeId']);
         
             $stmt->execute();
         

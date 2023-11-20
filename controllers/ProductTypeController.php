@@ -12,6 +12,13 @@ class ProductTypeController
         print_r($productsType);
     }
 
+    public function registerType()
+    {
+        $type = new ProductTypeModel();
+        $productTypeModel = $type->registerType();
+        print_r($productTypeModel);
+    }
+
     
     
 }
