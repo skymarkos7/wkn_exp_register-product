@@ -6,7 +6,6 @@ class ProductController
 {
     public function getAllProducts()
     {
-        echo"ssss";
         $productModel = new ProductModel();
         $products = $productModel->getAllProducts();
 

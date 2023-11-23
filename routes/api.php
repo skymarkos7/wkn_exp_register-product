@@ -23,6 +23,9 @@ $routes['GET /greeting'] = [$userController, 'getGreeting'];
 
 $routes = [
     'GET /products' => [$productController, 'getAllProducts'],
+];
+
+$routes = [
     'GET /product/{id}' => [$productController, 'getProduct'],
     'POST /product' => [$productController, 'registerProduct'],
 ];

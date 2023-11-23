@@ -20,6 +20,24 @@ Este projeto consiste em um sistema para gerenciar as operações de um mercado,
         - api.php
     - index.php
 
+<hr>
+
+## Instruções de Uso
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/mercado.git
+
+
+### Execute o servidor PHP embutido:
+``php -S localhost:8000``
+
+### Execute a imagem docker:
+### 
+``docker-compose up -d --build``
+
+## Acesse o sistema no navegador:
+``http://localhost:8000``
+
 ## Seguindo padrões recomendados
    - PSR`s do PHP: 
       - funções e classes tem a chave aberta na próxima linha
@@ -51,19 +69,6 @@ Este projeto consiste em um sistema para gerenciar as operações de um mercado,
 5. **Salvamento de Vendas:**
    - As vendas realizadas são salvas no sistema.
 
-## Instruções de Uso
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/mercado.git
 
-
-## Execute o servidor PHP embutido:
-``php -S localhost:8000``
-
-## Execute a imagem docker:
-``docker-compose up -d --build``
-
-## Acesse o sistema no navegador:
-``http://localhost:8000``
 
 
