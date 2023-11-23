@@ -12,28 +12,19 @@ $productController = new ProductController();
 $typeController = new ProductTypeController();
 $userModel = new UserModel();
 
+
+
+
 // Define routes
-$routes = [
-    'GET /users' => [$userController, 'getAllUsers'],
-    'GET /users/{id}' => [$userController, 'getUserById'],
-    // Add other routes as needed
-];
+$routes['GET /products'] = [$productController, 'getAllProducts'];
+$routes['POST /product'] = [$productController, 'registerProduct'];
+$routes['GET /product/{id}'] = [$productController, 'registerProduct'];
 
-$routes['GET /greeting'] = [$userController, 'getGreeting'];
+$routes['GET /types'] = [$typeController, 'getAllTypes'];
+$routes['POST /type'] = [$typeController, 'registerType'];
 
-$routes = [
-    'GET /products' => [$productController, 'getAllProducts'],
-];
 
-$routes = [
-    'GET /product/{id}' => [$productController, 'getProduct'],
-    'POST /product' => [$productController, 'registerProduct'],
-];
 
-$routes = [
-    'GET /type' => [$typeController, 'getAllTypes'],
-    'POST /type' => [$typeController, 'registerType'],
-];
 
 // Route manager function
 function handleRequest($method, $uri)

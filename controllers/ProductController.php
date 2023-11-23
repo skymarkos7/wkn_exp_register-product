@@ -19,9 +19,9 @@ class ProductController
 
     public function registerProduct()
     {
-        $productModel = new ProductModel();
-        $products = $productModel->registerProduct();
-        print_r($products);
+        // $productModel = new ProductModel();
+        // $products = $productModel->registerProduct();
+        print_r("specific");
     }
     
 }
